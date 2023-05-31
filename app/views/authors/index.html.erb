@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="authors">
+  <% @authors.each do |author| %>
+    <div class="row-cols-2">
+      <div class="card mb-3 mx-auto">
+        <div class="card-body">
+          <%= render author %>
+          <%= link_to "Show this author", author, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<%= link_to "New library", new_book_path, class: "btn btn-primary" %>

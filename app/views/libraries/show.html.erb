@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="libraries">
+    <div class="row-cols-2">
+      <div class="card mb-3 mx-auto">
+        <div class="card-body mx-auto">
+          <%= render @library %>
+          <%= link_to "Back to libraries", libraries_path, class: "btn btn-primary" %>
+          <%= link_to "pdf", libraries_pdf_path(@library.id.to_i), target: "_blank",  class: "btn btn-dark"%>
+        </div>
+      </div>
+    </div>
+</div>
+
+

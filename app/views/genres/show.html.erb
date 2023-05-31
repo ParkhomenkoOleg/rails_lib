@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="books">
+  <div class="row-cols-2">
+    <div class="card mb-3 mx-auto">
+      <div class="card-body mx-auto">
+        <%= render @genre %>
+        <%= link_to "Edit this genre", edit_genre_path(@genre), class: "btn btn-primary" %>
+        <%= link_to "Back to genres", genres_path, class: "btn btn-primary" %>
+        <%= button_to "Destroy this genre", @genre, method: :delete, class: "btn btn-danger mt-3" %>
+      </div>
+    </div>
+  </div>
+</div>

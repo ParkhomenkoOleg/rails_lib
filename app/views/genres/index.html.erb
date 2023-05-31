@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="genres">
+  <% @genres.each do |genre| %>
+    <div class="row-cols-2">
+      <div class="card mb-3 mx-auto">
+        <div class="card-body">
+          <%= render genre %>
+          <%= link_to "Show this genre", genre, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<%= link_to "New library", new_genre_path, class: "btn btn-primary" %>

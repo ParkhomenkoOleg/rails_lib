@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="authors">
+  <div class="row-cols-2">
+    <div class="card mb-3 mx-auto">
+      <div class="card-body mx-auto">
+        <%= render @author %>
+        <%= link_to "Edit this authors", edit_author_path(@author), class: "btn btn-primary" %>
+        <%= link_to "Back to authors", authors_path, class: "btn btn-primary" %>
+        <%= button_to "Destroy this author", @author, method: :delete, class: "btn btn-danger mt-3" %>
+      </div>
+    </div>
+  </div>
+</div>

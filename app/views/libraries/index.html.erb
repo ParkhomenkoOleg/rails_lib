@@ -1,0 +1,45 @@
+<p style="color: green"><%= notice %></p>
+
+<% if user_signed_in? %>
+  <div id="libraries">
+    <div class="row justify-content-center">
+      <div class="col-lg-2 text-center">
+        <%= link_to "Export CSV", libraries_path(format: 'csv'), class:"btn btn-primary link-offset-2 link-underline link-underline-opacity-0" %>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-1 text-end">
+        <%= link_to_prev_page @libraries, '<-', class:"link-offset-2 link-underline link-underline-opacity-0"%>
+      </div>
+      <div class="col-lg-1">
+        <%= link_to_next_page @libraries, '->', class:"link-offset-2 link-underline link-underline-opacity-0"%>
+      </div>
+    </div>
+    <% @libraries.each do |library| %>
+      <div class="row-cols-2">
+          <div class="card mb-3 mx-auto">
+            <div class="card-body">
+              <%= render library %>
+              <%= link_to "Show this library", "#{libraries_path}/#{library.id}", class: "btn btn-primary link-offset-2 link-underline link-underline-opacity-0" %>
+            </div>
+          </div>
+      </div>
+    <% end %>
+    <div class="row justify-content-center">
+      <div class="col-lg-1">
+        <%= link_to_prev_page @libraries, '<-', class:"link-offset-2 link-underline link-underline-opacity-0"%>
+      </div>
+      <div class="col-lg-1">
+        <%= link_to_next_page @libraries, '->', class:"link-offset-2 link-underline link-underline-opacity-0"%>
+      </div>
+    </div>
+  </div>
+
+<% else %>
+  <div class="mt-5 text-center">
+    <h1>Hello, you must register to view all content</h1>
+  </div>
+<% end %>
+
+
+

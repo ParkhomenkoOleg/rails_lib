@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Card readers</h1>
+
+<div id="card_readers">
+  <% @card_readers.each do |card_reader| %>
+    <%= render card_reader %>
+    <p>
+      <%= link_to "Show this card reader", card_reader %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New card reader", new_card_reader_path %>

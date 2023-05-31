@@ -1,0 +1,12 @@
+<%= render "form", book: @book %>
+
+<br>
+
+<div class="row justify-content-center">
+  <div class="col-2">
+    <%= link_to "Show this book", @book,  class: "btn btn-primary"%>
+  </div>
+  <div  class="col-2 ml-auto">
+    <%= link_to "Back to books", books_path,  class: "btn btn-primary" %>
+  </div>
+</div>
